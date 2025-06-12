@@ -16,10 +16,21 @@ const Topbar = () => {
     backdrop-blur-md z-10
     "
     >
-      <div className="flex gap-2 items-center">
-        <img src="/spotify.png" className="size-8" alt="spotify logo" />
-        Spotify
+      <div className="flex items-center gap-3 animate-logo-entry">
+        <img
+          src="/logo.png"
+          alt="Vibely Logo"
+          className="w-12 h-12 object-cover rounded-xl border-2 border-[#1d9ab9] shadow-xl"
+        />
+
+        <span
+          className="text-3xl font-extrabold text-[#7B61FF] tracking-wide drop-shadow-sm"
+          style={{ fontFamily: "'Trebuchet MS', sans-serif" }}
+        >
+          Tunex
+        </span>
       </div>
+
       <div className="flex items-center gap-4">
         {isAdmin && (
           <Link

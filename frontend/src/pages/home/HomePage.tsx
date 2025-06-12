@@ -7,6 +7,14 @@ import * as ScrollArea from "@radix-ui/react-scroll-area";
 import { usePlayerStore } from "@/stores/usePlayerStore";
 
 const HomePage = () => {
+
+  const getGreeting = () => {
+    const hour = new Date().getHours();
+    if (hour < 12) return "Good Morning";
+    if (hour < 18) return "Good Afternoon";
+    return "Good Evening";
+  };
+
   const {
     fetchFeaturedSongs,
     fetchMadeForYouSongs,
@@ -43,7 +51,7 @@ const HomePage = () => {
         <ScrollArea.Viewport className="h-full w-full min-h-full">
           <div className="p-4 sm:p-6 ">
             <h1 className="text-2xl sm:text-3xl font-bold mb-6">
-              Good Afternoon
+              {getGreeting()}
             </h1>
             <FeaturedSection />
 

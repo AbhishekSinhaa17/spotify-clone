@@ -86,8 +86,12 @@ const ChatPage = () => {
 export default ChatPage;
 
 const NoConversationPlaceholder = () => (
-  <div className="flex flex-col items-center justify-center h-full space-y-6">
-    <img src="/spotify.png" alt="spotify" className="size-16 animate-bounce" />
+  <div className="flex flex-col items-center justify-center h-full">
+    <img
+      src="/logo.png"
+      alt="spotify"
+      className="size-16 animate-bounce mb-2"
+    />
     <div className="text-center">
       <h3 className="text-zinc-300 text-lg font-medium mb-1">
         No conversation selected
